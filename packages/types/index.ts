@@ -1,4 +1,4 @@
 export interface Room {
     id: string,
-    users: []
+    users: [string]
 }

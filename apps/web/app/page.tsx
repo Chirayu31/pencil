@@ -14,7 +14,6 @@ export default function Page(): JSX.Element {
 
   useEffect(() => {
     socket?.on('created', (receivedRoomId: string) => {
-      console.log("here")
       setRoomDetails({ ...DEFAULT_ROOM, id: receivedRoomId })
       router.push(receivedRoomId)
     })
