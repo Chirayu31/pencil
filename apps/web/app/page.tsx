@@ -44,32 +44,36 @@ export default function Page(): JSX.Element {
   };
 
   return (
-    <main>
-      <label htmlFor="username">Enter your username</label>
+    <main className="flex flex-col w-full h-screen min-h-screen overflow-hidden items-center pt-8">
+
+      <h1 className="font-bold text-[96px] mb-2">Pencil</h1>
+      <label className="text-xl mb-2" htmlFor="username">Enter your username</label>
       <input
         type='text'
         name='username'
-        placeholder="username"
+        placeholder="Enter your Username"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
+        className="w-[300px] rounded-full p-3 border border-gray-500 pl-4 text-lg "
       />
 
-      <div>
-        <h3>Join a room</h3>
-        <label htmlFor="room-id">Enter your room id</label>
+      <div className="flex flex-col items-center mt-10 gap-4">
+        <h3 className="font-semibold text-3xl text-center ">Join a room</h3>
+        <label className="text-xl" htmlFor="room-id">Enter your room id</label>
         <input
           type='text'
           name='room-id'
-          placeholder="room id"
+          placeholder="Enter Room Id"
           value={roomId}
           onChange={(e) => setRoomId(e.target.value)}
+          className="w-[300px] rounded-full p-3 border border-gray-500 pl-4 text-lg "
         />
-        <button onClick={handleJoinRoom}>Join Room</button>
+        <button className="bg-yellow-300 p-4 w-[200px] rounded-full text-lg  font-semibold " onClick={handleJoinRoom}>Join Room</button>
       </div>
 
-      <div>
-        <h3>Create a room</h3>
-        <button onClick={handleCreateRoom}>Create Room</button>
+      <div className="flex flex-col items-center mt-20 gap-4">
+        <h3 className="font-semibold text-3xl text-center">Create a room</h3>
+        <button className="bg-green-300 p-4 w-[200px] rounded-full text-lg font-semibold " onClick={handleCreateRoom}>Create Room</button>
       </div>
     </main>
   );
