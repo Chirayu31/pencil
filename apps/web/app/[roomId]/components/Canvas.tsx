@@ -24,7 +24,7 @@ const Canvas = () => {
 
         if (ctx) socket.emit("joined_room")
 
-        socket.on("prevData", ({ prevMoves, users }: { prevMoves: DrawLineProps[]; users: Map<string, string> }) => {
+        socket.on("prevData", ({ prevMoves }: { prevMoves: DrawLineProps[] }) => {
             if (!ctx) return;
 
             for (let i = 0; i < prevMoves.length; i++) {

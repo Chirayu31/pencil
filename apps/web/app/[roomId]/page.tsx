@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useRecoilValue } from 'recoil'
 import { roomAtom } from '../../atoms/room'
 import Canvas from './components/Canvas'
